@@ -2,6 +2,7 @@
 	import { supabaseClient } from '$lib/utils/db';
 	import { invalidate } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import SEO from '#components/SEO.svelte';
 
 	onMount(() => {
 		const {
@@ -16,6 +17,7 @@
 	});
 </script>
 
+<SEO />
 <main class="flex flex-col min-h-screen">
 	<slot />
 </main>
