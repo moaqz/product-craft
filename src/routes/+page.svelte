@@ -13,7 +13,7 @@
 	</nav>
 </header>
 
-<section class="mx-auto my-20 sm:my-32 max-w-md sm:max-w-lg px-2.5 sm:px-0 text-center z-30">
+<section class="mx-auto my-28 sm:my-36 max-w-md sm:max-w-lg px-2.5 sm:px-0 text-center z-30">
 	<h1 class="text-5xl sm:text-6xl font-extrabold !leading-[1.15] text-gray-100">
 		<span
 			class="bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-500 bg-clip-text text-transparent"
