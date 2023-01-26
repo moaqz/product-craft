@@ -1,5 +1,4 @@
 <script>
-	import Header from '#components/Layout/Header.svelte';
 	import { supabaseClient } from '$lib/db';
 	import { invalidate } from '$app/navigation';
 	import { onMount } from 'svelte';
@@ -17,7 +16,6 @@
 	});
 </script>
 
-<Header />
-<main>
+<main class="flex flex-col min-h-screen">
 	<slot />
 </main>
