@@ -1,14 +1,14 @@
 <script>
 	import '../app.css';
-	import Github from '$lib/components/Icons/Github.svelte';
-	import Auth from '$lib/components/Auth.svelte';
+	import Github from '#components/Icons/Github.svelte';
+	import LinkButton from '#components/LinkButton.svelte';
 </script>
 
 <header class="w-full z-20">
 	<nav class="flex items-center justify-between px-5 h-16 max-w-screen-lg mx-auto">
 		<a href="/" class="text-3xl font-semibold">Flud</a>
 		<div class="flex items-center gap-x-3">
-			<Auth />
+			<LinkButton href="/product">New Product</LinkButton>
 		</div>
 	</nav>
 </header>
@@ -24,20 +24,11 @@
 		Flur is an amazing application that makes it easy to generate information about a product.
 	</h2>
 	<div class="mt-8 flex items-center justify-center space-x-3">
-		<a
-			href="/dashboard"
-			class="flex items-center py-2 px-5 rounded-full border border-white bg-white text-sm text-black hover:text-white hover:bg-transparent hover:duration-200 transition-colors"
-			>Get Started</a
-		>
-		<a
-			href="https://github.com/techwithmat/flud"
-			target="_blank"
-			rel="noreferrer"
-			class="flex items-center gap-2 py-2 px-5 rounded-full border border-white bg-transparent text-sm text-white hover:text-black hover:bg-white hover:duration-200 transition-colors"
-		>
+		<LinkButton href="/product">Get Started</LinkButton>
+		<LinkButton href="https://github.com/techwithmat/flud" variant="secondary">
 			<Github />
 			Star on Github
-		</a>
+		</LinkButton>
 	</div>
 </section>
 <div class="background">
