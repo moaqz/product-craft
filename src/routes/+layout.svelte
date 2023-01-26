@@ -1,5 +1,5 @@
 <script>
-	import { supabaseClient } from '$lib/db';
+	import { supabaseClient } from '$lib/utils/db';
 	import { invalidate } from '$app/navigation';
 	import { onMount } from 'svelte';
 

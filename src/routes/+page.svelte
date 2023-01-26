@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
-	import Github from '#components/Icons/Github.svelte';
-	import Auth from '#components/Auth.svelte';
+	import Github from '$lib/components/Icons/Github.svelte';
+	import Auth from '$lib/components/Auth.svelte';
 </script>
 
 <header class="w-full z-20">

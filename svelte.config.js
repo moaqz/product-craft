@@ -11,7 +11,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			'#routes': 'src/routes',
-			'#components': 'src/components'
+			'#components': 'src/lib/components',
+			'#utils': 'src/lib/utils'
 		}
 	}
 };

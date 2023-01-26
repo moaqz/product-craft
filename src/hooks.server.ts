@@ -1,1 +1,1 @@
-import '$lib/db';
+import '#utils/db';
