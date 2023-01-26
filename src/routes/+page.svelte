@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
 	import Github from '#components/Icons/Github.svelte';
-	import LinkButton from '#components/LinkButton.svelte';
+	import LinkButton from '#components/LinkButton/index.svelte';
 </script>
 
 <header class="w-full z-20">
