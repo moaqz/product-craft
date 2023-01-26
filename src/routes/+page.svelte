@@ -1,8 +1,11 @@
 <script>
 	import '../app.css';
+	import { page } from '$app/stores';
 </script>
 
-<div class="bg-black text-white h-screen">
-	<h1 class="text-3xl font-bold underline">Hello world</h1>
-	<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-</div>
+{#if !$page.data.session}
+	<h1>I am not logged in</h1>
+{:else}
+	<h1>Welcome {$page.data.session.user?.user_metadata?.name}</h1>
+	<p>I am logged in!</p>
+{/if}
