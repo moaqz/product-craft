@@ -12,7 +12,8 @@ const config = {
 		alias: {
 			'#routes': 'src/routes',
 			'#components': 'src/lib/components',
-			'#utils': 'src/lib/utils'
+			'#utils': 'src/lib/utils',
+			'#data': 'src/lib/data'
 		}
 	}
 };

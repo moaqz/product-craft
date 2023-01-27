@@ -1,6 +1,7 @@
 <script>
 	import '../app.css';
 	import FeatureCard from '#components/FeatureCard/index.svelte';
+	import { FEATURES } from '#data/features';
 </script>
 
 <section class="mx-auto mt-28 sm:mt-36 mb-12 max-w-md sm:max-w-lg px-2.5 sm:px-0 text-center z-30">
@@ -17,9 +18,7 @@
 <div
 	class="z-30 mx-auto max-w-screen-lg px-4 mt-8 grid items-center gap-4 sm:grid-cols-2 md:grid-cols-3 pb-20"
 >
-	<FeatureCard
-		title="Blog Content"
-		description="Write optimized blog posts in a fraction of the time."
-		href="/blog"
-	/>
+	{#each FEATURES as feature}
+		<FeatureCard {...feature} />
+	{/each}
 </div>

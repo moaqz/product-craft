@@ -1,4 +1,5 @@
 <script>
+	import '../app.css';
 	import SEO from '#components/SEO.svelte';
 	import Header from '#components/Header/index.svelte';
 </script>
@@ -27,14 +28,14 @@
 		background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, rgb(8, 8, 8) 100%);
 		position: absolute;
 		content: '';
-		z-index: 2;
+		z-index: -1;
 		width: 100%;
 		height: 100%;
 		top: 0;
 	}
 
 	.background-content {
-		z-index: 3;
+		z-index: -1;
 		max-width: 640px;
 		background-image: radial-gradient(at 27% 37%, #3a8bfd 0, transparent 0),
 			radial-gradient(at 97% 21%, #72fe7d 0, transparent 50%),
