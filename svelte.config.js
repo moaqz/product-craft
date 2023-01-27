@@ -13,7 +13,8 @@ const config = {
 			'#routes': 'src/routes',
 			'#components': 'src/lib/components',
 			'#utils': 'src/lib/utils',
-			'#data': 'src/lib/data'
+			'#data': 'src/lib/data',
+			'#services': 'src/lib/services'
 		}
 	}
 };
