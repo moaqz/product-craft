@@ -1,9 +1,20 @@
 import { PUBLIC_COHERE_API_KEY } from '$env/static/public';
 
-export async function getDescription(input: string) {
+interface Props {
+	brand?: string;
+	keywords: string;
+	description: string;
+}
+
+export async function getDescription({ description, keywords, brand }: Props) {
+	const prompt = `Write a creative product description for a ${description} ${
+		brand && 'named ' + brand
+	}, with the keywords ${keywords}.
+  `;
+
 	const data = {
 		model: 'command-xlarge-20221108',
-		prompt: `Write a creative product description for ${input}`,
+		prompt,
 		max_tokens: 60,
 		temperature: 0.9,
 		k: 0,
