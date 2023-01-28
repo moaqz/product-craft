@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { scale } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import Copy from '#components/Icons/Copy.svelte';
 
 	export let text: string;
+	export let idx: number;
 	const charts = text.length;
 	const words = text.split(' ').length;
 
@@ -23,7 +24,7 @@
 
 <div
 	class="border border-brand-border rounded-md bg-brand-secondary p-4 flex flex-col"
-	in:scale={{ duration: 200, start: 0.95 }}
+	in:fly={{ y: 100 * idx }}
 >
 	<p>
 		{text}
