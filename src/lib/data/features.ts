@@ -7,13 +7,12 @@ export interface Feature {
 export const FEATURES: Feature[] = [
 	{
 		title: 'Product Description',
-		description: 'Product description given specified input keywords, audience, and tone of voice',
+		description: 'Create a product description given keywords and a product name',
 		href: '/description'
 	},
 	{
-		title: 'Product Benefits',
-		description:
-			'Turns a product description into a list of functional, emotional, and social benefits.',
+		title: 'Feature Benefits',
+		description: 'Turns a feature into a list of functional and social benefits.',
 		href: '/benefits'
 	}
 ];

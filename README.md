@@ -16,7 +16,7 @@
 git clone git@github.com:techwithmat/flud.git
 
 # Install dependencies
-pnpm install 
+pnpm install
 
 # Run the development server:
 pnpm run dev

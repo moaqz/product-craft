@@ -20,15 +20,17 @@
 				console.error(err);
 			});
 	}
+
+	let lines = Array.from(new Set(text.split('\n')));
 </script>
 
 <div
 	class="border border-brand-border rounded-md bg-brand-secondary p-4 flex flex-col"
 	in:fly={{ y: 100 * idx }}
 >
-	<p>
-		{text}
-	</p>
+	{#each lines as line}
+		<p>{line}</p>
+	{/each}
 	<div class="flex items-center justify-between mt-4">
 		<button
 			class="flex items-center gap-3 py-2 px-5 rounded-md border text-sm transition-colors hover:duration-200 border-white bg-white text-black hover:text-white hover:bg-transparent"
