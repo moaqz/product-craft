@@ -14,7 +14,8 @@ const config = {
 			'#components': 'src/lib/components',
 			'#utils': 'src/lib/utils',
 			'#data': 'src/lib/data',
-			'#services': 'src/lib/services'
+			'#services': 'src/lib/services',
+			'#types': 'src/lib/types'
 		}
 	}
 };

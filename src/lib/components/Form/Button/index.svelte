@@ -1,14 +1,38 @@
 <script lang="ts">
-	export let type: 'submit' | 'button' | 'reset' = 'button';
+	import type { ButtonType } from '#types';
+	export let type: ButtonType = 'button';
 	export let disabled = false;
 </script>
 
 {#if disabled}
-	<button class="button disabled" on:click disabled {type} {...$$restProps}>
+	<button
+		class="button disabled"
+		disabled
+		{type}
+		on:click
+		on:click
+		on:change
+		on:keydown
+		on:keyup
+		on:mouseenter
+		on:mouseleave
+		{...$$restProps}
+	>
 		<slot />
 	</button>
 {:else}
-	<button class="button" on:click {type} {...$$restProps}>
+	<button
+		class="button"
+		{type}
+		on:click
+		on:click
+		on:change
+		on:keydown
+		on:keyup
+		on:mouseenter
+		on:mouseleave
+		{...$$restProps}
+	>
 		<slot />
 	</button>
 {/if}
