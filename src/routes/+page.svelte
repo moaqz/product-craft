@@ -12,7 +12,7 @@
 		> Your Product Creation Process
 	</h1>
 	<h2 class="mt-4 text-gray-300 text-lg sm:text-xl">
-		Flur is an amazing application that makes it easy to generate information about a product.
+		A powerful tool that allows users to quickly and easily generate product information.
 	</h2>
 </section>
 <div

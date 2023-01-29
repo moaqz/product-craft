@@ -1,11 +1,12 @@
 <script lang="ts">
-	export let title = 'Home';
+	export let title =
+		'A powerful tool that allows users to quickly and easily generate product information.';
 </script>
 
 <svelte:head>
 	<meta
 		name="description"
-		content="A powerful tool that allows users to quickly and easily generate product information such as FAQs, descriptions, and names."
+		content="A powerful tool that allows users to quickly and easily generate product information."
 	/>
 	<meta name="keywords" content="artificial intelligence, AI" />
 
@@ -18,7 +19,7 @@
 	<meta property="og:title" content="Flud" />
 	<meta
 		property="og:description"
-		content="A powerful tool that allows users to quickly and easily generate product information such as FAQs, descriptions, and names."
+		content="A powerful tool that allows users to quickly and easily generate product information."
 	/>
 
 	<meta property="og:url" content="https://flud.vercel.app/" />
