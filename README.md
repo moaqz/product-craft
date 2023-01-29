@@ -6,7 +6,6 @@
 
 - [**SvelteKit**](https://kit.svelte.dev/) - A framework for building extremely high-performance web apps.
 - [**Typescript**](https://www.typescriptlang.org/) - A superset of JavaScript.
-- [**Vitest**](https://vitest.dev/) - A blazing fast unit test framework.
 - [**Tailwind CSS**](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
 
 ## 🔧 Development setup
