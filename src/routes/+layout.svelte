@@ -1,10 +1,8 @@
 <script>
 	import '../app.css';
-	import SEO from '#components/SEO.svelte';
-	import Header from '#components/Header/index.svelte';
+	import Header from '#components/Layout/Header.svelte';
 </script>
 
-<SEO />
 <main class="flex flex-col min-h-screen bg-brand-primary text-white">
 	<Header />
 	<slot />
