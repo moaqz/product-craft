@@ -5,6 +5,7 @@
 ## ⚒️ Built with:
 
 - [**SvelteKit**](https://kit.svelte.dev/) - A framework for building extremely high-performance web apps.
+- [**Vitest**](https://vitest.dev/) - A blazing fast unit test framework.
 - [**Typescript**](https://www.typescriptlang.org/) - A superset of JavaScript.
 - [**Tailwind CSS**](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
 
