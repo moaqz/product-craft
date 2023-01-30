@@ -4,3 +4,5 @@ export type Reponse = {
 };
 
 export type ButtonType = 'button' | 'submit' | 'reset';
+export type ButtonVariants = 'blue' | 'light';
+export type ButtonSizes = 'sm' | 'md';

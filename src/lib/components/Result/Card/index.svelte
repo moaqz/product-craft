@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import { Copy } from '#components/Icons';
+	import { Button } from '#components/Form';
 
 	export let text: string;
 	export let idx: number;
@@ -32,17 +33,14 @@
 		<p>{line}</p>
 	{/each}
 	<div class="flex items-center justify-between mt-4">
-		<button
-			class="flex items-center gap-3 py-2 px-5 rounded-md border text-sm transition-colors hover:duration-200 border-white bg-white text-black hover:text-white hover:bg-transparent"
-			on:click={handleClick}
-		>
+		<Button size="sm" variant="light" on:click={handleClick}>
 			{#if !copied}
 				<Copy />
 				Copy
 			{:else}
 				Copied!
 			{/if}
-		</button>
+		</Button>
 		<p class="text-gray-300 text-sm">{words} words / {charts} chars</p>
 	</div>
 </div>

@@ -36,7 +36,7 @@
 		<Label id="keywords">Keywords</Label>
 		<Input id="keywords" placeholder="e.g. Entretaining, Friendly" />
 
-		<Button type="submit" text="Create Content" isLoading={loading} />
+		<Button type="submit" isLoading={loading}>Create Content</Button>
 	</form>
 
 	{#if response}

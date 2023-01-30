@@ -29,7 +29,7 @@
 			id="description"
 		/>
 
-		<Button type="submit" text="Create Content" isLoading={loading} />
+		<Button type="submit" isLoading={loading}>Create Content</Button>
 	</form>
 
 	{#if response}
