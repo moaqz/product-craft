@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ArrowRight from '#components/Icons/ArrowRight.svelte';
+	import { ArrowRight } from '#components/Icons';
 
 	export let title: string;
 	export let description: string;

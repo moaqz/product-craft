@@ -1,18 +1,17 @@
 <script lang="ts">
-	import type { InputType } from '#types';
-
-	export let type: InputType = 'text';
 	export let id: string;
 	export let placeholder: string;
 	export let required = true;
+	export let value = '';
 </script>
 
 <input
-	{type}
 	{id}
 	{placeholder}
+	{required}
+	type="text"
 	name={id}
-	required={required ? true : false}
+	bind:value
 	on:blur
 	on:change
 	on:click

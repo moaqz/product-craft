@@ -9,10 +9,5 @@
 		{title}
 	</h1>
 
-	<form class="flex flex-col gap-y-4" on:submit|preventDefault>
-		<slot name="form" />
-	</form>
-	<div class="grid gap-4 mt-8">
-		<slot />
-	</div>
+	<slot />
 </section>

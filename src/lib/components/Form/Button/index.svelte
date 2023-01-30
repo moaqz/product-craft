@@ -1,41 +1,30 @@
 <script lang="ts">
+	import { Loading } from '#components/Icons';
 	import type { ButtonType } from '#types';
+
 	export let type: ButtonType = 'button';
-	export let disabled = false;
+	export let isLoading = false;
+	export let text: string;
 </script>
 
-{#if disabled}
-	<button
-		class="button disabled"
-		disabled
-		{type}
-		on:click
-		on:click
-		on:change
-		on:keydown
-		on:keyup
-		on:mouseenter
-		on:mouseleave
-		{...$$restProps}
-	>
-		<slot />
-	</button>
-{:else}
-	<button
-		class="button"
-		{type}
-		on:click
-		on:click
-		on:change
-		on:keydown
-		on:keyup
-		on:mouseenter
-		on:mouseleave
-		{...$$restProps}
-	>
-		<slot />
-	</button>
-{/if}
+<button
+	class="button disabled"
+	disabled={isLoading}
+	{type}
+	on:click
+	on:change
+	on:keydown
+	on:keyup
+	on:mouseenter
+	on:mouseleave
+	{...$$restProps}
+>
+	{#if isLoading}
+		<Loading /> Loading...
+	{:else}
+		{text}
+	{/if}
+</button>
 
 <style lang="postcss">
 	.button {

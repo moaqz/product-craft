@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	import Copy from '#components/Icons/Copy.svelte';
+	import { Copy } from '#components/Icons';
 
 	export let text: string;
 	export let idx: number;
