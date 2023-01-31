@@ -52,10 +52,14 @@ export async function getDescription({
 	}
 }
 
-export async function getFeatureBenefits({ description }: { description: string }) {
-	const prompt = `
-    Convert the following product feature into a list of benefits, using a numbered format. Also, make sure that the list doesn't contain any repeating items. The product feature is: ${description}
-  `;
+export async function getWelcomeEmail({
+	productName,
+	description
+}: {
+	productName: string;
+	description: string;
+}) {
+	const prompt = `Write a welcome email for new customers for a product named ${productName}, ${description}.`;
 
 	try {
 		const promise = await fetch('https://api.cohere.ai/generate', {
@@ -64,7 +68,7 @@ export async function getFeatureBenefits({ description }: { description: string 
 			body: JSON.stringify({
 				prompt,
 				max_tokens: 200,
-				temperature: 0.4,
+				temperature: 0.1,
 				...commonBodyData
 			})
 		});
@@ -73,7 +77,7 @@ export async function getFeatureBenefits({ description }: { description: string 
 
 		return response.generations;
 	} catch (error) {
-		console.error('getFeatureBenefits', error);
+		console.error('getWelcomeEmail', error);
 		return;
 	}
 }

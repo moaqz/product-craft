@@ -20,7 +20,7 @@
 			});
 	}
 
-	let lines = Array.from(new Set(text.split('\n')));
+	let lines = text.split('\n');
 </script>
 
 <div class="border border-brand-border rounded-md bg-brand-secondary p-4 flex flex-col">

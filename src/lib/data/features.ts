@@ -11,8 +11,13 @@ export const FEATURES: Feature[] = [
 		href: '/description'
 	},
 	{
-		title: 'Feature Benefits',
-		description: 'Turns a feature into a list of functional and social benefits.',
-		href: '/benefits'
+		title: 'Welcome Email',
+		description: 'Give a warm welcome to your new customer or subscriber!',
+		href: '/email'
+	},
+	{
+		title: 'Discount Promotion',
+		description: 'Create an elegant discount promotion message.',
+		href: '/discount'
 	}
 ];
