@@ -1,4 +1,4 @@
-export type Reponse = {
+export type CohereReponse = {
 	id: string;
 	text: string;
 };

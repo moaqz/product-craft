@@ -1,13 +1,13 @@
-<script async script lang="ts">
+<script script lang="ts">
 	import PageWrapper from '#components/Layout/PageWrapper.svelte';
-	import { getFeatureBenefits } from '#services/getFeatureBenefits';
+	import { getFeatureBenefits } from '#services/cohere';
 	import { ResultCard } from '#components/Result';
 	import { Button, TextArea, Label } from '#components/Form';
-	import type { Reponse } from '#types';
+	import type { CohereReponse } from '#types';
 
 	let loading = false;
+	let response: CohereReponse[];
 
-	let response: Reponse[];
 	async function handleSubmit(e: SubmitEvent) {
 		loading = true;
 		response = [];
@@ -34,8 +34,8 @@
 
 	{#if response}
 		<div class="grid gap-4 mt-8">
-			{#each response as res, idx}
-				<ResultCard text={res?.text?.trim()} {idx} />
+			{#each response as res}
+				<ResultCard text={res.text} />
 			{/each}
 		</div>
 	{/if}
