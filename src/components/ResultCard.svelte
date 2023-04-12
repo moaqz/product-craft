@@ -22,7 +22,7 @@
   let lines = text.split("\n");
 </script>
 
-<div class="border-gray-800 bg-gray-700 flex flex-col rounded-md border p-4">
+<div class="flex flex-col rounded-md border border-gray-800 bg-gray-700 p-4">
   {#each lines as line}
     <p>{line}</p>
   {/each}

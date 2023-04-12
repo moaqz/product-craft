@@ -41,13 +41,13 @@
   </p>
 
   <form
-    class="flex flex-col space-y-4 mt-5"
+    class="mt-5 flex flex-col space-y-4"
     on:submit|preventDefault={handleSubmit}
   >
     <div class="space-y-2">
       <label for="description">Product Description</label>
       <textarea
-        class="mt-2 resize-none p-4 h-40 overflow-y-auto w-full bg-gray-700 border border-gray-800 rounded outline-none focus:ring-1 focus:ring-orange-500"
+        class="mt-2 h-40 w-full resize-none overflow-y-auto rounded border border-gray-800 bg-gray-700 p-4 outline-none focus:ring-1 focus:ring-orange-500"
         placeholder="Enter a brief description of your product here..."
         id="description"
         name="description"
@@ -59,7 +59,7 @@
     <div class="space-y-2">
       <label for="option">Select an option:</label>
       <select
-        class="mt-2 p-2 bg-gray-700 border border-gray-800 rounded outline-none focus:ring-1 focus:ring-orange-500 w-full"
+        class="mt-2 w-full rounded border border-gray-800 bg-gray-700 p-2 outline-none focus:ring-1 focus:ring-orange-500"
         id="option"
         name="option"
         required
@@ -71,9 +71,9 @@
 
     <button
       type="submit"
-      class="py-2 flex items-center justify-center text-lg font-medium rounded border w-full {isLoading
-        ? 'cursor-not-allowed bg-orange-500/10 border-orange-500/10 text-gray-500'
-        : 'bg-orange-500 border-orange-500 '}"
+      class="flex w-full items-center justify-center rounded border py-2 text-lg font-medium {isLoading
+        ? 'cursor-not-allowed border-orange-500/10 bg-orange-500/10 text-gray-500'
+        : 'border-orange-500 bg-orange-500 '}"
       aria-label="Submit"
       disabled={isLoading}
     >
@@ -86,7 +86,7 @@
   </form>
 
   {#if results}
-    <div class="grid gap-4 mt-8">
+    <div class="mt-8 grid gap-4">
       {#each results as res}
         <ResultCard text={res.text} />
       {/each}

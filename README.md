@@ -33,6 +33,6 @@ PUBLIC_COHERE_API_KEY=
 
 Open [localhost:5173](http://localhost:5173/) with your browser to see the result.
 
-## 🔑 License
+## [🔑] License
 
 - [MIT](https://github.com/techwithmat/product-craft/blob/main/LICENSE)

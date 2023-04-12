@@ -4,6 +4,6 @@
 
 @layer components {
   .primary-button {
-    @apply flex items-center gap-3 rounded-full border py-2 px-5 transition-colors hover:duration-200 border-white bg-white text-sm text-black hover:bg-transparent hover:text-white;
+    @apply flex items-center gap-3 rounded-full border border-white bg-white px-5 py-2 text-sm text-black transition-colors hover:bg-transparent hover:text-white hover:duration-200;
   }
 }
