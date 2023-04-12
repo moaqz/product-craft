@@ -1,29 +1,38 @@
-## 👋 Introduction
+<div align="center">
+  <a href="https://product-craft.vercel.app">
+    <img src="static/banner.png">
+  </a>
+</div>
 
-[**Flud**](https://flud.vercel.app/) is a content creation tool.
+## [📦] Built with:
 
-## ⚒️ Built with:
+- **SvelteKit**
+- **TypeScript**
+- **TailwindCSS**
+- **Cohere.AI**
 
-- [**SvelteKit**](https://kit.svelte.dev/) - A framework for building extremely high-performance web apps.
-- [**Vitest**](https://vitest.dev/) - A blazing fast unit test framework.
-- [**Typescript**](https://www.typescriptlang.org/) - A superset of JavaScript.
-- [**Tailwind CSS**](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
+## [🔧] Development setup
 
-## 🔧 Development setup
+1. Clone the repository:
 
 ```bash
-# Clone the repository:
-git clone git@github.com:techwithmat/flud.git
+git clone git@github.com:techwithmat/product-craft.git
+```
 
-# Install dependencies
+2. Install dependencies:
+
+```bash
 pnpm install
+```
 
-# Run the development server:
-pnpm run dev
+3. Create a **.env** file with the following content:
+
+```env
+PUBLIC_COHERE_API_KEY=
 ```
 
 Open [localhost:5173](http://localhost:5173/) with your browser to see the result.
 
 ## 🔑 License
 
-- [MIT](https://github.com/techwithmat/flud/blob/main/LICENSE)
+- [MIT](https://github.com/techwithmat/product-craft/blob/main/LICENSE)
