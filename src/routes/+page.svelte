@@ -1,24 +1,95 @@
-<script>
-	import '../app.css';
-	import FeatureCard from '#components/FeatureCard/index.svelte';
-	import { FEATURES } from '#data/features';
+<script lang="ts">
+  import Link from "#/components/Link.svelte";
+  import { Spinner } from "#/components/Icons";
+  import { generateProductPrompt } from "#/services/cohere";
+  import ResultCard from "#/components/ResultCard.svelte";
+  import type { CohereReponse } from "#/types/index";
+
+  let isLoading = false;
+  let results: CohereReponse[];
+
+  async function handleSubmit(e: SubmitEvent) {
+    results = [];
+    isLoading = true;
+
+    const formData = new FormData(e.target as HTMLFormElement);
+    const description = formData.get("description") as string;
+    const option = formData.get("option") as string;
+
+    try {
+      results = await generateProductPrompt(description, option);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      isLoading = false;
+    }
+  }
 </script>
 
-<section class="mx-auto mt-28 sm:mt-36 mb-12 max-w-md sm:max-w-lg px-2.5 sm:px-0 text-center z-30">
-	<h1 class="text-5xl sm:text-6xl font-extrabold !leading-[1.15] text-gray-100">
-		<span
-			class="bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-500 bg-clip-text text-transparent"
-			>Simplify</span
-		> Your Product Creation Process
-	</h1>
-	<h2 class="mt-4 text-gray-300 text-lg sm:text-xl">
-		A powerful tool that allows users to quickly and easily generate product information.
-	</h2>
+<section class="mx-auto max-w-2xl px-5 py-28">
+  <h1 class="mb-5 text-xl font-medium">
+    AI-powered tool that can generate product ads, welcome emails, and more
+    based on the description provided.
+  </h1>
+  <p class="rounded border border-orange-600 bg-orange-500/50 p-5">
+    🤖 This project was created during the <Link
+      href="https://github.com/midudev/midu-cohere-hackathon"
+      >midudev hackaton
+    </Link> using Cohere AI models, to learn more about, check out their <Link
+      href="https://cohere.ai/">website</Link
+    >.
+  </p>
+
+  <form
+    class="flex flex-col space-y-4 mt-5"
+    on:submit|preventDefault={handleSubmit}
+  >
+    <div class="space-y-2">
+      <label for="description">Product Description</label>
+      <textarea
+        class="mt-2 resize-none p-4 h-40 overflow-y-auto w-full bg-gray-700 border border-gray-800 rounded outline-none focus:ring-1 focus:ring-orange-500"
+        placeholder="Enter a brief description of your product here..."
+        id="description"
+        name="description"
+        required
+        minlength={4}
+      />
+    </div>
+
+    <div class="space-y-2">
+      <label for="option">Select an option:</label>
+      <select
+        class="mt-2 p-2 bg-gray-700 border border-gray-800 rounded outline-none focus:ring-1 focus:ring-orange-500 w-full"
+        id="option"
+        name="option"
+        required
+      >
+        <option value="welcomeEmail">Generate a welcome email</option>
+        <option value="ad">Generate an ad</option>
+      </select>
+    </div>
+
+    <button
+      type="submit"
+      class="py-2 flex items-center justify-center text-lg font-medium rounded border w-full {isLoading
+        ? 'cursor-not-allowed bg-orange-500/10 border-orange-500/10 text-gray-500'
+        : 'bg-orange-500 border-orange-500 '}"
+      aria-label="Submit"
+      disabled={isLoading}
+    >
+      {#if isLoading}
+        <Spinner /> Loading...
+      {:else}
+        Submit
+      {/if}
+    </button>
+  </form>
+
+  {#if results}
+    <div class="grid gap-4 mt-8">
+      {#each results as res}
+        <ResultCard text={res.text} />
+      {/each}
+    </div>
+  {/if}
 </section>
-<div
-	class="z-30 mx-auto max-w-screen-lg px-4 mt-8 grid items-center gap-4 sm:grid-cols-2 md:grid-cols-3 pb-20"
->
-	{#each FEATURES as feature}
-		<FeatureCard {...feature} />
-	{/each}
-</div>

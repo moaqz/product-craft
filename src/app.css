@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .primary-button {
+    @apply flex items-center gap-3 rounded-full border py-2 px-5 transition-colors hover:duration-200 border-white bg-white text-sm text-black hover:bg-transparent hover:text-white;
+  }
+}
