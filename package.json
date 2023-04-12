@@ -1,5 +1,5 @@
 {
-	"name": "flud",
+	"name": "product-craft",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -11,8 +11,7 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"test:unit": "vitest",
-		"test:nowatch": "vitest run",
-		"prepare": "husky install"
+		"test:nowatch": "vitest run"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "1.0.0",
@@ -28,7 +27,6 @@
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-svelte3": "4.0.0",
 		"htm": "3.1.1",
-		"husky": "8.0.0",
 		"jsdom": "21.1.0",
 		"postcss": "8.4.21",
 		"prettier": "2.8.0",
