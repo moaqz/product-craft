@@ -16,7 +16,7 @@
 1. Clone the repository:
 
 ```bash
-git clone git@github.com:techwithmat/product-craft.git
+git clone git@github.com:moaqz/product-craft.git
 ```
 
 2. Install dependencies:
@@ -35,4 +35,4 @@ Open [localhost:5173](http://localhost:5173/) with your browser to see the resul
 
 ## [🔑] License
 
-- [MIT](https://github.com/techwithmat/product-craft/blob/main/LICENSE)
+- [MIT](https://github.com/moaqz/product-craft/blob/main/LICENSE)
