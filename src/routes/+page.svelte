@@ -28,8 +28,8 @@
 
 <section class="mx-auto max-w-2xl px-5 py-28">
   <h1 class="mb-5 text-xl font-medium">
-    AI-powered tool that can generate product ads, welcome emails, and more
-    based on the description provided.
+    AI-powered tool to generate product ads, welcome emails, and more based on
+    the description provided.
   </h1>
   <p class="rounded border border-orange-600 bg-orange-500/50 p-5">
     🤖 This project was created during the <Link
@@ -71,9 +71,9 @@
 
     <button
       type="submit"
-      class="flex w-full items-center justify-center rounded border py-2 text-lg font-medium {isLoading
-        ? 'cursor-not-allowed border-orange-500/10 bg-orange-500/10 text-gray-500'
-        : 'border-orange-500 bg-orange-500 '}"
+      class="flex w-full items-center justify-center rounded py-2 text-lg font-semibold text-black {isLoading
+        ? 'cursor-not-allowed bg-orange-500/10 text-gray-500'
+        : 'bg-orange-600 transition-colors hover:bg-orange-500'}"
       aria-label="Submit"
       disabled={isLoading}
     >
