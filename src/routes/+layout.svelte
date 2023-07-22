@@ -9,7 +9,7 @@
     <a href="/" class="text-lg font-semibold sm:text-2xl">Product Craft</a>
     <div class="flex items-center gap-x-3">
       <Link
-        href="https://github.com/techwithmat/product-craft"
+        href="https://github.com/moaqz/product-craft"
         classname="primary-button"
       >
         <Github />
